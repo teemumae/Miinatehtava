@@ -9,11 +9,18 @@ def sijainti_kentalla(x, y, leveys, korkeus):
     korkeus-=1
     if x == 0 and y == 0:
         sijainti = "nurkassa"
-    elif leveys < 0 or korkeus < 0:
+    elif x == leveys and y == korkeus:
+        sijainti = "nurkassa"
+    elif x == 0 and y == korkeus:
+        sijainti = "nurkassa"
+    elif x == leveys and y == 0:
+        sijainti = "nurkassa"
+    elif x < 0 or y < 0:
         sijainti = "ulkona"
     elif x > leveys or y > korkeus:
         sijainti = "ulkona"
-
+    else:
+        sijainti = "keskellä"
     return sijainti
 
 def tulosta_sijainti(sijainti):
