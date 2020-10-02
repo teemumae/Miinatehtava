@@ -5,5 +5,6 @@ TULOSTUKSET = {
     "keskellä": "Antamasi ruutu on keskikentällä."
 }
 def sijainti_kentalla(x, y, leveys, korkeus):
-
+    return sijainti
 def tulosta_sijainti(sijainti):
+
