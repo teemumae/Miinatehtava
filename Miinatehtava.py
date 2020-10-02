@@ -19,6 +19,14 @@ def sijainti_kentalla(x, y, leveys, korkeus):
         sijainti = "ulkona"
     elif x > leveys or y > korkeus:
         sijainti = "ulkona"
+    elif x == 0 and y < korkeus and y >0:
+        sijainti = "laidalla"
+    elif y == 0 and x > 0 and x < leveys:
+        sijainti = "laidalla"
+    elif x == leveys and y > 0 and y < k:
+        sijainti = "laidalla"
+    elif y == korkeus and x > 0 and x < leveys:
+        sijainti = "laidalla"
     else:
         sijainti = "keskellä"
     return sijainti
