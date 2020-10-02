@@ -5,6 +5,15 @@ TULOSTUKSET = {
     "keskellä": "Antamasi ruutu on keskikentällä."
 }
 def sijainti_kentalla(x, y, leveys, korkeus):
+    leveys-=1
+    korkeus-=1
+    if x == 0 and y == 0:
+        sijainti = "nurkassa"
+    elif leveys < 0 or korkeus < 0:
+        sijainti = "ulkona"
+    elif x > leveys or y > korkeus:
+        sijainti = "ulkona"
+
     return sijainti
 
 def tulosta_sijainti(sijainti):
